@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Yummy ui lybrary build with sass and Tailwind",
   "main": "index.js",
+  "private": true,
   "repository": {
     "url": "https://github.com/Yummy-Corp/yummy-ui",
     "type": "git"
@@ -12,7 +13,10 @@
     "email": "risqi.romadhoni@yummycorp.com"
   },
   "license": "MIT",
-  "packageManager": "yarn@3.2.2",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
@@ -23,5 +27,6 @@
     "extends": [
       "@commitlint/config-conventional"
     ]
-  }
+  },
+  "packageManager": "yarn@3.2.2"
 }
